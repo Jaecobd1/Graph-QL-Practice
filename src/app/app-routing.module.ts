@@ -1,0 +1,20 @@
+import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
+import { LaunchListComponent } from './launch-list/launch-list.component';
+
+const routes: Routes = [
+  {
+    path: '',
+    components: LaunchListComponent
+  },
+  {
+    path: ':id',
+    component: LaunchDetailsComponent
+  }
+];
+
+@NgModule({
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule]
+})
+export class AppRoutingModule { }
